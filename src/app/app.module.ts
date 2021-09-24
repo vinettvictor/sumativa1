@@ -11,6 +11,7 @@ import { ProductosComponent } from './vistas/productos/productos.component';
 import { LoginComponent } from './vistas/login/login.component';
 import { RegistroComponent } from './vistas/registro/registro.component';
 import { HomeComponent } from './vistas/home/home.component';
+import { PaginaDefaultComponent } from './vistas/pagina-default/pagina-default.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './vistas/home/home.component';
     ProductosComponent,
     LoginComponent,
     RegistroComponent,
-    HomeComponent
+    HomeComponent,
+    PaginaDefaultComponent
   ],
   imports: [
     BrowserModule,

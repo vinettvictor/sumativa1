@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './vistas/home/home.component';
 import { LoginComponent } from './vistas/login/login.component';
+import { PaginaDefaultComponent } from './vistas/pagina-default/pagina-default.component';
 import { ProductosComponent } from './vistas/productos/productos.component';
 import { RegistroComponent } from './vistas/registro/registro.component';
 
@@ -10,8 +11,10 @@ const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'producto', component: ProductosComponent},
     {path: 'login',component: LoginComponent},
-    {path: 'registro',component: RegistroComponent}
+    {path: 'registro',component: RegistroComponent},
     //componente 404
+    {path: '**', component: PaginaDefaultComponent},
+
 
 ];
 
