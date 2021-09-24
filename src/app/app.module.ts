@@ -10,6 +10,7 @@ import { CategoriasComponent } from './vistas/categorias/categorias.component';
 import { ProductosComponent } from './vistas/productos/productos.component';
 import { LoginComponent } from './vistas/login/login.component';
 import { RegistroComponent } from './vistas/registro/registro.component';
+import { HomeComponent } from './vistas/home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RegistroComponent } from './vistas/registro/registro.component';
     CategoriasComponent,
     ProductosComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
