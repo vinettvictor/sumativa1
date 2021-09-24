@@ -11,6 +11,7 @@ const routes: Routes = [
     {path: 'producto', component: ProductosComponent},
     {path: 'login',component: LoginComponent},
     {path: 'registro',component: RegistroComponent}
+    //componente 404
 
 ];
 
