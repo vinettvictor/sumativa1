@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+//rutas
 import { AppRoutingModule } from './app-routing.module';
+//componentes
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './compartida/header/header.component';
 import { FooterComponent } from './compartida/footer/footer.component';
@@ -12,6 +13,8 @@ import { LoginComponent } from './vistas/login/login.component';
 import { RegistroComponent } from './vistas/registro/registro.component';
 import { HomeComponent } from './vistas/home/home.component';
 import { PaginaDefaultComponent } from './vistas/pagina-default/pagina-default.component';
+import { PruebasComponent } from './vistas/pruebas/pruebas.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { PaginaDefaultComponent } from './vistas/pagina-default/pagina-default.c
     LoginComponent,
     RegistroComponent,
     HomeComponent,
-    PaginaDefaultComponent
+    PaginaDefaultComponent,
+    PruebasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //siempre se debe importar FormsModule para trabajar con formularios
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

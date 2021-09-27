@@ -11,16 +11,20 @@
 
 <body>
 
-    <form class="form-register" action="" method="">
+    <form class="form-register" (submit)="registro()">
         <h4>Formulario de Registro</h4>
-        <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre" minlength="4" maxlength="16" required>
-        <input class="controls" type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido" minlength="4" maxlength="16" required>
-        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
-        <input class="controls" type="text" name="profesion" id="profesion" placeholder="Ingrese su Profesión" required>
-        <input class="controls" type="password" name="password" id="username" placeholder="Ingrese su Contraseña" required>
-        <input class="controls" type="password" name="passwordConfirmation" id="password" placeholder="Confirme su Contraseña" minlength="8" maxlength="16" required>
+        <input class="controls" [(ngModel)]="nombre" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre" minlength="4" maxlength="16" required>
+        <p style="color: wheat">{{nombre}}</p>
+        <input class="controls" [(ngModel)]="apellido" type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido" minlength="4" maxlength="16" required>
+        <p style="color: wheat">{{apellido}}</p>
+        <input class="controls" [(ngModel)]="email" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
+        <p style="color: wheat">{{email}}</p>
+        <input class="controls" [(ngModel)]="password" type="password" name="password" id="username" placeholder="Ingrese su Contraseña" required>
+        <p style="color: wheat">{{password}}</p>
+        <input class="controls" [(ngModel)]="confirmPassword" type="password" name="confirmPassword" id="password" placeholder="Confirme su Contraseña" minlength="8" maxlength="16" required>
+        <p style="color: wheat">{{confirmPassword}}</p>
         <input class="botons" type="submit" value="Registrarme">
-        <p><a href="#">¿Ya tengo Cuenta?</a></p>
+        <p><a routerLink="/login">¿Ya tengo Cuenta?</a></p>
     </form>
 </body>
 

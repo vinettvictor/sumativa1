@@ -4,6 +4,7 @@ import { HomeComponent } from './vistas/home/home.component';
 import { LoginComponent } from './vistas/login/login.component';
 import { PaginaDefaultComponent } from './vistas/pagina-default/pagina-default.component';
 import { ProductosComponent } from './vistas/productos/productos.component';
+import { PruebasComponent } from './vistas/pruebas/pruebas.component';
 import { RegistroComponent } from './vistas/registro/registro.component';
 
 //referencias a los componentes
@@ -12,6 +13,8 @@ const routes: Routes = [
     {path: 'producto', component: ProductosComponent},
     {path: 'login',component: LoginComponent},
     {path: 'registro',component: RegistroComponent},
+    {path: 'prueba',component: PruebasComponent},
+
     //componente 404
     {path: '**', component: PaginaDefaultComponent},
 

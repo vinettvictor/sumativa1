@@ -1,0 +1,67 @@
+<!--
+<form (ngSubmit)="insertar2($event)">
+    <button type="submit" class="btn btn-primary">Ingresar 2</button>
+
+</form>-->
+
+<form (submit)="insertar()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" name="email" [(ngModel)]="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingrese su Email">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" [(ngModel)]="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+    </div>
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+</form>
+<br>
+
+
+<ul>
+    <li>
+        <p>Email: {{email}}</p>
+    </li>
+    <li>
+        <p> Password: {{password}}</p>
+    </li>
+</ul>
+<hr>
+
+
+<p> Fecha de hoy: {{Fecha}} </p>
+<p> Fecha de hoy: {{Fecha1}} </p>
+<p> Fecha de hoy: {{Fecha2}} </p>
+<!--ngIf-->
+<!--Llamando al get de la variable-->
+<p> Mes de hoy: {{getMes}} </p>
+
+<button type="button" class="btn btn-success" (click)="obtenerDia()">Obtener Día</button>
+<p> Día actual: {{getDia}} </p>
+<hr>
+<input type="text" class="form-control" placeholder="ingrese un día" #dianuevo><br>
+<button type="submit" class="btn btn-primary" (click)="agregar(dianuevo.value)">Agregar Día</button>
+<hr>
+<!--Bindings-->
+<button type="button" class="btn btn-success" (click)="sumar()">Sumar</button><br>
+<button type="button" class="btn btn-success" (click)="restar()">Restar</button>
+
+<h3>Contador: {{Contador}}</h3>
+
+<!-- ngFor -->
+<ul>
+    <li *ngFor="let dia of dias_semanas; let i = index">
+
+        <b *ngIf="getDia == i; else templateName"> {{dia}}</b>
+
+        <ng-template #templateName>
+            {{dia}}
+        </ng-template>
+    </li>
+
+    <p *ngIf !=null>{{dianuevo}}</p>
+</ul>
+
+<h3> El elemento eliminado es: {{eliminado}}</h3>
+<button type="button" class="btn btn-success" (click)="eliminar()">Eliminar Día</button>
