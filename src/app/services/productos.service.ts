@@ -7,7 +7,7 @@ import { Producto } from '../interfaces/producto.interface';
     providedIn: 'root'
 })
 export class ProductosService {
-    producto:  Producto[] = [];
+    productos:  Producto[] = [];
 
 
     constructor(private http: HttpClient) {
@@ -18,8 +18,8 @@ export class ProductosService {
     private cargarProductos(){
         this.http.get('assets/data/producto.json').subscribe(
         (respuesta: Producto | any) => {
-            this.producto= respuesta.productos;
-            console.log("Respuesta para Productos: ", this.producto);
+            this.productos= respuesta.productos;
+            console.log("Respuesta para Productos: ", this.productos);
         });
     }
 }
