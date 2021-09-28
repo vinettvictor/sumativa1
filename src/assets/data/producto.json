@@ -1,33 +1,38 @@
 {
     "productos": [{
             "id": 1,
-            "nombre": "Pera",
-            "descripcion": "El rincon de Soto",
-            "precio": 12.34
+            "nombre": "Red Bull Acai",
+            "descripcion": "Exquisita red bull - infoooooooo ACAI",
+            "precio": 2500,
+            "img": "assets/img/redbull-acai.jpg"
         },
         {
             "id": 2,
-            "nombre": "Kiwi",
-            "descripcion": "Zespri",
-            "precio": 2.34
+            "nombre": "Red Bull Blue",
+            "descripcion": "Exquisita red bull - infoooooooos BLUE",
+            "precio": 15000,
+            "img": "assets/img/redbull-blue.jfif"
         },
         {
             "id": 3,
-            "nombre": null,
-            "descripcion": null,
-            "precio": null
+            "nombre": "Red Bull Red",
+            "descripcion": "Exquisita red bull - infoooooooo RED",
+            "precio": 8000,
+            "img": "assets/img/redbull-red.jpg"
         },
         {
             "id": 4,
-            "nombre": null,
-            "descripcion": null,
-            "precio": null
+            "nombre": "Red Bull Yellow",
+            "descripcion": "Exquisita red bull - infoooooooo YELLOW",
+            "precio": 5000,
+            "img": "assets/img/redbull-yellow.jpg"
         },
         {
             "id": 5,
-            "nombre": "Melocotones",
-            "descripcion": "Natur",
-            "precio": "3.55"
+            "nombre": "Red Bull Original",
+            "descripcion": "Exquisita red bull - infoooooooo ORIGINAL!",
+            "precio": 3500,
+            "img": "assets/img/redbull.jpg"
         }
     ]
 }
