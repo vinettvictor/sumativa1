@@ -15,6 +15,8 @@ import { HomeComponent } from './vistas/home/home.component';
 import { PaginaDefaultComponent } from './vistas/pagina-default/pagina-default.component';
 import { PruebasComponent } from './vistas/pruebas/pruebas.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     //siempre se debe importar FormsModule para trabajar con formularios
     FormsModule,
+
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
