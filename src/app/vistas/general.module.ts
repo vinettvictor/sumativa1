@@ -6,6 +6,9 @@ import { PaginaDefaultComponent } from './pagina-default/pagina-default.componen
 import { ProductosComponent } from './productos/productos.component';
 import { PruebasComponent } from './pruebas/pruebas.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { ModalComponent } from './modal/modal.component';
+import { CategoriasComponent } from './categorias/categorias.component';
 
 
 @NgModule({
@@ -14,13 +17,26 @@ declarations: [
     HomeComponent,
     PaginaDefaultComponent,
     ProductosComponent,
-    PruebasComponent
+    PruebasComponent,
+    ModalComponent,
+    CategoriasComponent
 
+],
+
+exports: [
+    CaracteristicasComponent,
+    HomeComponent,
+    PaginaDefaultComponent,
+    ProductosComponent,
+    PruebasComponent,
+    ModalComponent,
+    CategoriasComponent
 ],
 
 imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
 ]
 
 })

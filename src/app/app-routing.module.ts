@@ -16,6 +16,7 @@ const routes: Routes = [
     {path: 'registro',component: RegistroComponent},
     {path: 'prueba',component: PruebasComponent},
     {path: 'producto/{id}',component: CaracteristicasComponent},
+    {path: 'pruebas',component: PruebasComponent},
 
     //componente 404
     {path: '**', component: PaginaDefaultComponent},
