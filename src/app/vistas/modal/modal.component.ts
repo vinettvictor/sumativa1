@@ -12,6 +12,11 @@ export class ModalComponent implements OnInit {
   @Input() accion: any = null;
   @Input() fecha: any = null;
 
+  @Input() nombre: any = null;
+  @Input() informacion: any = null;
+  @Input() precio: any = null;
+  @Input() cantidad: any = null;
+
   constructor() { }
 
   ngOnInit(): void {

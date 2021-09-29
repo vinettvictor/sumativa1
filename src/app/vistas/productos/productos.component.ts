@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CategoriaService } from 'src/app/services/categoria.service';
 import { ProductosService } from 'src/app/services/productos.service';
+import { Producto } from '../../interfaces/producto.interface';
 
 @Component({
   selector: 'app-productos',
@@ -8,6 +9,16 @@ import { ProductosService } from 'src/app/services/productos.service';
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
+
+
+  Titulo: string = 'Curso Angular Basico';
+  Titulo2: string = 'Formulario';
+  Detalle: string = 'Esta a punt ode realizar una accion';
+  nombre: Producto | any;
+  Informacion: Producto | any;
+  Precio: Producto | any;
+  cantidad: Producto | any;
+
 
   //cantidad: number  = 0;
   index: number  | undefined | any;

@@ -30,9 +30,14 @@
                                 <p class="card-text"><small class="text-muted">Valor: {{producto.precio}}</small></p>
                                 <p class="card-text"><small class="text-muted" name="cantidad">Cantidad: {{producto.cantidad}}</small></p>
 
-                                <button type="submit" class="card-button btn btn-success">Agregar</button> &nbsp;
+                                <button type="submit" class="card-button btn btn-success">Agregar</button> <br>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Desplegar Información
+                                </button>
+                                <!-- Modal Componente Hijo-->
+                                <app-modal [nombre]="producto.nombre" [informacion]="producto.descripcion" [cantidad]="producto.cantidad" [precio]="producto.precio">
+                                </app-modal>
                             </form>
-                            <button class="card-button btn btn-primary">Información</button>
                         </div>
                     </div>
                 </div>
