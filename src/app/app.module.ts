@@ -16,6 +16,7 @@ import { PaginaDefaultComponent } from './vistas/pagina-default/pagina-default.c
 import { PruebasComponent } from './vistas/pruebas/pruebas.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CaracteristicasComponent } from './vistas/caracteristicas/caracteristicas.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegistroComponent,
     HomeComponent,
     PaginaDefaultComponent,
-    PruebasComponent
+    PruebasComponent,
+    CaracteristicasComponent
   ],
   imports: [
     BrowserModule,

@@ -23,9 +23,15 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">{{producto.nombre}} </h5>
+
+                            <h5 class="card-title">{{producto.nombre}}</h5>
                             <p class="card-text">Descripción: {{producto.descripcion}}</p>
                             <p class="card-text"><small class="text-muted">Valor: {{producto.precio}}</small></p>
+                            <p class="card-text"><small class="text-muted">Cantidad: {{producto.cantidad}}</small></p>
+                            <form (submit)="agregar(producto.id)">
+                                <button type="submit" class="card-button btn btn-success">Agregar</button>
+                            </form>
+                            <button class="card-button btn btn-primary" routerLink="/caracteristicas/{{producto.id}}">Información</button> &nbsp;
                         </div>
                     </div>
                 </div>

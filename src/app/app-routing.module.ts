@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CaracteristicasComponent } from './vistas/caracteristicas/caracteristicas.component';
 import { HomeComponent } from './vistas/home/home.component';
 import { LoginComponent } from './vistas/login/login.component';
 import { PaginaDefaultComponent } from './vistas/pagina-default/pagina-default.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
     {path: 'login',component: LoginComponent},
     {path: 'registro',component: RegistroComponent},
     {path: 'prueba',component: PruebasComponent},
+    {path: 'caracteristica/{id}',component: CaracteristicasComponent},
 
     //componente 404
     {path: '**', component: PaginaDefaultComponent},

@@ -4,35 +4,40 @@
             "nombre": "Red Bull Acai",
             "descripcion": "Exquisita red bull - infoooooooo ACAI",
             "precio": 2500,
-            "img": "assets/img/redbull-acai.jpg"
+            "img": "assets/img/redbull-acai.jpg",
+            "cantidad": 10
         },
         {
             "id": 2,
             "nombre": "Red Bull Blue",
             "descripcion": "Exquisita red bull - infoooooooos BLUE",
             "precio": 15000,
-            "img": "assets/img/redbull-blue.jfif"
+            "img": "assets/img/redbull-blue.jfif",
+            "cantidad": 15
         },
         {
             "id": 3,
             "nombre": "Red Bull Red",
             "descripcion": "Exquisita red bull - infoooooooo RED",
             "precio": 8000,
-            "img": "assets/img/redbull-red.jpg"
+            "img": "assets/img/redbull-red.jpg",
+            "cantidad": 20
         },
         {
             "id": 4,
             "nombre": "Red Bull Yellow",
             "descripcion": "Exquisita red bull - infoooooooo YELLOW",
             "precio": 5000,
-            "img": "assets/img/redbull-yellow.jpg"
+            "img": "assets/img/redbull-yellow.jpg",
+            "cantidad": 30
         },
         {
             "id": 5,
             "nombre": "Red Bull Original",
             "descripcion": "Exquisita red bull - infoooooooo ORIGINAL!",
             "precio": 3500,
-            "img": "assets/img/redbull.jpg"
+            "img": "assets/img/redbull.jpg",
+            "cantidad": 50
         }
     ]
 }
