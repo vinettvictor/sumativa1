@@ -8,6 +8,7 @@ import { Producto } from '../interfaces/producto.interface';
 })
 export class ProductosService {
     productos:  Producto[] = [];
+    lista_productos: [] = [];
 
 
     constructor(private http: HttpClient) {
@@ -20,6 +21,8 @@ export class ProductosService {
         (respuesta: Producto | any) => {
             this.productos= respuesta.productos;
             console.log("Respuesta para Productos: ", this.productos);
+
+            this.lista_productos = respuesta;
         });
     }
 }
