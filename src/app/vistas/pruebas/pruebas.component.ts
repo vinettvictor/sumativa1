@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pruebas.component.css']
 })
 export class PruebasComponent implements OnInit {
+ Titulo: string = 'Curso Angular Basico';
+ Titulo2: string = 'Formulario';
+ Detalle: string = 'Esta a punt ode realizar una accion';
+ Accion: string = 'Guardar Cambios';
+
 
   //fechas
   Fecha: Date = new Date();
