@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CaracteristicasComponent } from './vistas/caracteristicas/caracteristicas.component';
 import { HomeComponent } from './vistas/home/home.component';
-import { LoginComponent } from './vistas/login/login.component';
+import { LoginComponent } from './login/login/login.component';
 import { PaginaDefaultComponent } from './vistas/pagina-default/pagina-default.component';
 import { ProductosComponent } from './vistas/productos/productos.component';
 import { PruebasComponent } from './vistas/pruebas/pruebas.component';
-import { RegistroComponent } from './vistas/registro/registro.component';
+import { RegistroComponent } from './login/registro/registro.component';
 
 //referencias a los componentes
 const routes: Routes = [

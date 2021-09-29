@@ -23,15 +23,11 @@ export class ProductosComponent implements OnInit {
 
 
   agregar(id: number | any): void{
-
-    
-    
     console.log("el id es: ", id);
     id = id - 1;//inicializamos la id en 0
-    console.log("el id es despues: ", id);
     this.listaProductos.push(this.productosService.productos[id]); // agregamos los productos a nuestra nueva lista de productos
     
-    console.log("cantidad en arreglo:",this.productosService.productos[id].cantidad);
+    console.log("cantidad en arreglo:",this.listaProductos);
     //recorremos la lista para comparar si las id son iguales
     for(let prod in this.productosService.productos){
 
