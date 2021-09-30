@@ -39,7 +39,6 @@ export class ProductosComponent implements OnInit {
 
 
 
-
   capturaPropagar(mensaje:  any): void{
     console.log("recibiendo mensaje: ", mensaje);
   }
@@ -57,10 +56,6 @@ export class ProductosComponent implements OnInit {
           this.productosService.lista_productos.push(producto); // y agrega un producto a la lista de productos nuevas        
       }
     }
-  }
-
-  eliminar(): void{
-    this.productosService.lista_productos.pop();
   }
 
   obtenerInformacion(producto: Producto | any ): void{
@@ -96,9 +91,7 @@ export class ProductosComponent implements OnInit {
       } else {
         console.log("Producto no encontrado");
       }
-  
   }
 }
- 
 
 }

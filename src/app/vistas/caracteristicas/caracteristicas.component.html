@@ -17,7 +17,7 @@
             <td>{{producto.precio}}</td>
             <td><img src="{{producto.img}}" width="30px"></td>
             <td>
-                <button class="btn btn-danger">Eliminar</button>
+                <button class="btn btn-danger" (click)="eliminar(producto)">Eliminar</button>
             </td>
         </tr>
 </table>

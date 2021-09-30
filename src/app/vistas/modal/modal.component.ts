@@ -21,7 +21,6 @@ export class ModalComponent implements OnInit {
 
   //accionModal , puede ser cualquier nombre
   @Output() propagar = new EventEmitter<string>(); // enviar funcion al html
-  @Output() eliminarId = new EventEmitter();
   msj: string | undefined;
 
   constructor() { }
@@ -34,12 +33,4 @@ export class ModalComponent implements OnInit {
     console.log("enviar datos: ", this.msj);
     this.propagar.emit(this.msj);
   }
-
-  eliminarPorId(id: any){
-    console.log("id a eliminar es: ", id)
-    this.eliminarId.emit(id);
-  }
-
-  
-
 }
