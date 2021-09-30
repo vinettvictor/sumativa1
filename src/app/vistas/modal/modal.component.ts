@@ -11,6 +11,7 @@ export class ModalComponent implements OnInit {
   @Input() detalle:any = null;
   @Input() accion: any = null;
   @Input() fecha: any = null;
+  @Input() mensaje: any = null;
 
   @Input() nombre: any = null;
   @Input() informacion: any = null;

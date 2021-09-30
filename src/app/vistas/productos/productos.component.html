@@ -34,7 +34,9 @@
                                 <p class="card-text">Descripción: {{producto.descripcion}}</p>
                                 <p class="card-text"><small class="text-muted">Valor: {{producto.precio}}</small></p>
                                 <p class="card-text"><small class="text-muted" name="cantidad">Cantidad: {{producto.cantidad}}</small></p>
-                                <button type="submit" class="card-button btn btn-success">Agregar</button> <br>
+                                <button type="submit" class="card-button btn btn-success">Agregar
+                                </button>
+                                <br>
 
                             </form>
                             <form (ngSubmit)="obtenerInformacion(producto)">
@@ -45,7 +47,6 @@
                                 <app-modal [nombre]="Nombre" [informacion]="Informacion" [cantidad]="cantidad" [precio]="Precio">
                                 </app-modal>
                             </form>
-
                         </div>
                     </div>
                 </div>

@@ -14,6 +14,7 @@ export class ProductosComponent implements OnInit {
   Titulo: string = 'Curso Angular Basico';
   Titulo2: string = 'Formulario';
   Detalle: string = 'Esta a punt ode realizar una accion';
+  Mensaje: string = 'Se agrego con Exito el producto a tu carrito de compras';
 
   Nombre: string | any = '';
   Informacion: string | any = '';
@@ -37,15 +38,16 @@ export class ProductosComponent implements OnInit {
 
   agregar(producto: Producto | any): void {
     
-    this.index = producto.id; //le pasamos el id del producto al index
+    this.index = producto.id - 1; //le pasamos el id del producto al index
 
     console.log(this.index);
 
     for (let prod in this.productosService.productos){ //recorremos los productos
-      if(this.index == this.productosService.productos[prod].id){ // comparamos si las id son iguales
+      if(producto.id == this.productosService.productos[prod].id){ // comparamos si las id son iguales
+          console.log("id coinciden: ")
           producto.cantidad--; //si son iguales, descuenta 1 a la cantidad
           this.productosService.lista_productos.push(producto); // y agrega un producto a la lista de productos nuevas
-          console.log("el id es correcto"+this.productosService.lista_productos[prod].id );
+          
       } else {
         console.log("el id no coincide ");
       }
@@ -61,7 +63,7 @@ export class ProductosComponent implements OnInit {
     console.log(this.index);
 
     for (let prod in this.productosService.productos){ 
-      if(this.index == this.productosService.productos[prod].id){
+      if(producto.id == this.productosService.productos[prod].id){
         console.log("id coinciden: ")
         this.Nombre = this.productosService.productos[this.index].nombre;
         this.Informacion = this.productosService.productos[this.index].descripcion;
