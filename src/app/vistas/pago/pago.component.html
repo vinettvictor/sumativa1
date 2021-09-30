@@ -65,5 +65,11 @@
 
         </form>
     </div>
-
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-pago">
+            Ver Resumen de Pago
+        </button>
+        <app-modal-pago [pais]="pais" [region]="region" [ciudad]="ciudad" [calle]="calle" [nombre]="nombre" [tipo]="tipo" [numeroTarjeta]="numeroTarjeta">
+        </app-modal-pago>
+    </div>
 </div>
