@@ -1,20 +1,21 @@
-<h1 class="text-center">Caracteristicas del producto</h1>
-<div class="row">
-    <div class="col-sm-4" *ngFor="let producto of productosService.lista_productos">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="{{producto}}" class="img-fluid rounded-start" alt="red bull">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text">Descripción: {{producto}}</p>
-                        <p class="card-text"><small class="text-muted">Valor: {{producto}} </small></p>
-                        <p class="card-text"><small class="text-muted">Cantidad:  {{producto}}</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<h1 class="text-center">Carrito de Compras</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of productosService.lista_productos">
+            <td>{{producto.id}}</td>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.cantidad}}</td>
+            <td><img src="{{producto.img}}" width="30px"></td>
+        </tr>
+</table>

@@ -15,7 +15,7 @@ const routes: Routes = [
     {path: 'login',component: LoginComponent},
     {path: 'registro',component: RegistroComponent},
     {path: 'prueba',component: PruebasComponent},
-    {path: 'producto/{id}',component: CaracteristicasComponent},
+    {path: 'caracteristica',component: CaracteristicasComponent},
     {path: 'pruebas',component: PruebasComponent},
 
     //componente 404
