@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ModalComponent } from './modal/modal.component';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { PagoComponent } from './pago/pago.component';
+import { ModalPagoComponent } from './modal-pago/modal-pago.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ declarations: [
     ProductosComponent,
     PruebasComponent,
     ModalComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    PagoComponent,
+    ModalPagoComponent
 
 ],
 

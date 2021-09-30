@@ -21,6 +21,8 @@ export class ProductosComponent implements OnInit {
   Precio: string | any = '';
   cantidad: string | any = '';
 
+  //mensaje: string = '';
+
 
   //cantidad: number  = 0;
   index: number  | undefined | any;
@@ -35,6 +37,12 @@ export class ProductosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
+
+  capturaPropagar(mensaje:  any): void{
+    console.log("recibiendo mensaje: ", mensaje);
+  }
 
   agregar(producto: Producto | any): void {
     
@@ -91,4 +99,6 @@ export class ProductosComponent implements OnInit {
   
   }
 }
+ 
+
 }

@@ -14,7 +14,7 @@
         <button class="btn btn-success" type="submit" (click)="buscarProducto(nombre.value)" data-bs-toggle="modal" data-bs-target="#exampleModal">Buscar Productos
         </button>
         <!-- Modal Componente Hijo-->
-        <app-modal [nombre]="Nombre" [informacion]="Informacion" [cantidad]="cantidad" [precio]="Precio">
+        <app-modal (propagar)="capturaPropagar($event)" [nombre]="Nombre" [informacion]="Informacion" [cantidad]="cantidad" [precio]="Precio">
         </app-modal>
     </form>
     <h1 class="text-center" style="color:wheat">Productos</h1>
@@ -38,10 +38,10 @@
                             </form>
                             <form (ngSubmit)="obtenerInformacion(producto)">
                                 <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    Desplegar Información
+                                    Desplegar Información propagar
                                 </button>
                                 <!-- Modal Componente Hijo-->
-                                <app-modal [nombre]="Nombre" [informacion]="Informacion" [cantidad]="cantidad" [precio]="Precio">
+                                <app-modal (propagar)="capturaPropagar($event)" [nombre]="Nombre" [informacion]="Informacion" [cantidad]="cantidad" [precio]="Precio">
                                 </app-modal>
                             </form>
                         </div>

@@ -7,6 +7,7 @@ import { PaginaDefaultComponent } from './vistas/pagina-default/pagina-default.c
 import { ProductosComponent } from './vistas/productos/productos.component';
 import { PruebasComponent } from './vistas/pruebas/pruebas.component';
 import { RegistroComponent } from './login/registro/registro.component';
+import { PagoComponent } from './vistas/pago/pago.component';
 
 //referencias a los componentes
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
     {path: 'prueba',component: PruebasComponent},
     {path: 'caracteristica',component: CaracteristicasComponent},
     {path: 'pruebas',component: PruebasComponent},
+    {path: 'pagar',component: PagoComponent},
 
     //componente 404
     {path: '**', component: PaginaDefaultComponent},

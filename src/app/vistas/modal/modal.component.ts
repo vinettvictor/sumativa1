@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -18,9 +18,28 @@ export class ModalComponent implements OnInit {
   @Input() precio: any = null;
   @Input() cantidad: any = null;
 
+
+  //accionModal , puede ser cualquier nombre
+  @Output() propagar = new EventEmitter<string>(); // enviar funcion al html
+  @Output() eliminarId = new EventEmitter();
+  msj: string | undefined;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  onAccion(){
+    this.msj = "Enviando datos al padre 1 2 3";
+    console.log("enviar datos: ", this.msj);
+    this.propagar.emit(this.msj);
+  }
+
+  eliminarPorId(id: any){
+    console.log("id a eliminar es: ", id)
+    this.eliminarId.emit(id);
+  }
+
+  
 
 }
