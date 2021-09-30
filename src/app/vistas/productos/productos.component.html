@@ -10,10 +10,15 @@
 <body>
     <h2 style="color: wheat"> Cantidad de productos en el carrito: {{carrito}}</h2>
     <br>
-    <input class="input-group mb-3" type="search" placeholder="Ingrese el Producto a Buscar" aria-label="Search">
-    <div class="text-center">
-        <button class="btn btn-success" type="submit">Buscar Productos</button>
-    </div>
+    <form>
+        <input class="input-group mb-3" type="search" placeholder="Ingrese el Nombre del Producto, ejemplo: Red Bull Acai" aria-label="Search" #nombre>
+        <button class="btn btn-success" type="submit" (click)="buscarProducto(nombre.value)" data-bs-toggle="modal" data-bs-target="#exampleModal">Buscar Productos
+        </button>
+        <!-- Modal Componente Hijo-->
+        <app-modal [nombre]="Nombre" [informacion]="Informacion" [cantidad]="cantidad" [precio]="Precio">
+        </app-modal>
+    </form>
+
     <h1 class="text-center" style="color:wheat">Productos</h1>
     <div class="row">
         <div class="col-sm-4" *ngFor="let producto of productosService.productos">
@@ -29,19 +34,17 @@
                                 <p class="card-text">Descripción: {{producto.descripcion}}</p>
                                 <p class="card-text"><small class="text-muted">Valor: {{producto.precio}}</small></p>
                                 <p class="card-text"><small class="text-muted" name="cantidad">Cantidad: {{producto.cantidad}}</small></p>
-
                                 <button type="submit" class="card-button btn btn-success">Agregar</button> <br>
 
                             </form>
-                            <form (ngSubmit)="obtenerInformacion(producto.id)">
+                            <form (ngSubmit)="obtenerInformacion(producto)">
                                 <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Desplegar Información
                                 </button>
                                 <!-- Modal Componente Hijo-->
-                                <app-modal [nombre]="producto.nombre" [informacion]="producto.descripcion" [cantidad]="producto.cantidad" [precio]="producto.precio">
+                                <app-modal [nombre]="Nombre" [informacion]="Informacion" [cantidad]="cantidad" [precio]="Precio">
                                 </app-modal>
                             </form>
-
 
                         </div>
                     </div>

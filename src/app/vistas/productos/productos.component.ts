@@ -15,7 +15,7 @@ export class ProductosComponent implements OnInit {
   Titulo2: string = 'Formulario';
   Detalle: string = 'Esta a punt ode realizar una accion';
 
-  nombre: string | any = '';
+  Nombre: string | any = '';
   Informacion: string | any = '';
   Precio: string | any = '';
   cantidad: string | any = '';
@@ -50,39 +50,46 @@ export class ProductosComponent implements OnInit {
         console.log("el id no coincide ");
       }
     }
+  }
 
+  eliminar(): void{
+    this.productosService.lista_productos.pop();
+  }
 
+  obtenerInformacion(producto: Producto | any ): void{
+    this.index = producto.id-1;
+    console.log(this.index);
 
-    //console.log("el id es: ", id);
-    //id = id - 1;//inicializamos la id en 0
-
-
-    //this.listaProductos.push(this.productosService.productos[id]); // agregamos los productos a nuestra nueva lista de productos
-
-    //console.log("cantidad en arreglo:",this.listaProductos);
-    //recorremos la lista para comparar si las id son iguales
-    /** 
-    for(let prod in this.productosService.productos){
-
-      if(this.productosService.productos[id].id == this.productosService.productos[prod].id){ 
-        this.listaProductos[prod].cantidad = this.listaProductos[prod].cantidad-1; // si las id coinciden , descuenta 1 de cantidad.
-        this.listaProductos.join(this.listaProductos[prod]); //agregamos los datos actualizados al arreglo, pero solo reemplazando el valor "cantidad"
-      
-      } else {
-        console.log("los id no son igual ")
+    for (let prod in this.productosService.productos){ 
+      if(this.index == this.productosService.productos[prod].id){
+        console.log("id coinciden: ")
+        this.Nombre = this.productosService.productos[this.index].nombre;
+        this.Informacion = this.productosService.productos[this.index].descripcion;
+        this.Precio = this.productosService.productos[this.index].precio;
+        this.cantidad = this.productosService.productos[this.index].cantidad;
       }
-      
     }
-    */
-    //console.log("Cantidad nueva: " + this.cantidad)
-    
-    //this.carrito = this.listaProductos.length;
   }
 
-  obtenerInformacion(id: number | any ): void{
-    this.nombre = this.productosService.productos[id].nombre;
-    this.Informacion = this.productosService.productos[id].descripcion;
-    this.Precio = this.productosService.productos[id].precio;
-    this.cantidad = this.productosService.productos[id].cantidad;
+  buscarProducto(nombre: string | any) {
+
+    console.log("id obtenido: ", nombre)
+
+    for (let prod in this.productosService.productos){ 
+      if(nombre.trim() == this.productosService.productos[prod].nombre){
+          console.log("producto encontrado", this.productosService.productos[prod]);
+          this.Nombre = this.productosService.productos[prod].nombre;
+          this.Informacion = this.productosService.productos[prod].descripcion;
+          this.Precio = this.productosService.productos[prod].precio;
+          this.cantidad = this.productosService.productos[prod].cantidad;
+          console.log(this.Nombre);
+          console.log(this.Informacion);
+          console.log(this.Precio);
+          console.log(this.cantidad);
+      } else {
+        console.log("Producto no encontrado");
+      }
+  
   }
+}
 }
