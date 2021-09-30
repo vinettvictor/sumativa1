@@ -38,7 +38,7 @@
                             </form>
                             <form (ngSubmit)="obtenerInformacion(producto)">
                                 <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    Ver Información 
+                                    Ver Producto 
                                 </button>
                                 <!-- Modal Componente Hijo-->
                                 <app-modal (propagar)="capturaPropagar($event)" [nombre]="Nombre" [informacion]="Informacion" [cantidad]="cantidad" [precio]="Precio">

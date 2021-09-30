@@ -1,0 +1,28 @@
+{
+    "tarjetas": [{
+            "id": 1,
+            "nombreCliente": "Victor Vinett",
+            "numeroTarjeta": "0000111111111",
+            "tipo": "Visa",
+            "codigoSeguridad": "045",
+            "fecha": "05/23"
+        },
+        {
+            "id": 2,
+            "nombreCliente": "Juan Perex",
+            "numeroTarjeta": "0000333333333",
+            "tipo": "Credito",
+            "codigoSeguridad": "023",
+            "fecha": "06/25"
+        },
+        {
+            "id": 3,
+            "nombreCliente": "Victor Vinett",
+            "numeroTarjeta": "0000122222222",
+            "tipo": "Debito",
+            "codigoSeguridad": "045",
+            "fecha": "02/24"
+        }
+
+    ]
+}

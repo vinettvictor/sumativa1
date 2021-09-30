@@ -59,6 +59,6 @@ export class PagoComponent implements OnInit {
   }
 
   agregarTarjeta(){
-
+    
   }
 }
