@@ -1,33 +1,40 @@
 <h1 class="text-center"> Formulario de Despacho </h1>
-<form>
-    <div class="row">
-        <div class="col-sm-6">
-            <h3>Formulario de Envio</h3>
+<div class="row">
+    <div class="col-sm-6">
+        <h3>Formulario de Envio</h3>
+        <form (ngSubmit)="agregarDireccion()">
             <div class="mb-3">
                 <label for="pais" class="form-label">Pais</label>
-                <input type="text" class="form-control" id="direccion" required>
+                <input type="text" [(ngModel)]="pais" name="pais" class="form-control" required>
+                <p style="color:red">{{errPais}}</p>
             </div>
             <div class="mb-3">
                 <label for="calle" class="form-label">Calle</label>
-                <input type="text" class="form-control" id="direccion" required>
+                <input type="text" [(ngModel)]="calle" name="calle" class="form-control" required>
+                <p style="color:red">{{errCalle}}</p>
             </div>
             <div class="mb-3">
                 <label for="ciudad" class="form-label">Ciudad</label>
-                <input type="text" class="form-control" id="direccion" required>
+                <input type="text" [(ngModel)]="ciudad" name="ciudad" class="form-control" required>
+                <p style="color:red">{{errCiudad}}</p>
             </div>
             <div class="mb-3">
                 <label for="region" class="form-label">Región</label>
-                <input type="text" class="form-control" id="direccion" required>
+                <input type="text" [(ngModel)]="region" name="region" class="form-control" required>
+                <p style="color:red">{{errRegion}}</p>
             </div>
             <div class="mb-3">
                 <label for="codPostal" class="form-label">Código Postal</label>
-                <input type="text" class="form-control" id="codPostal" required>
+                <input type="number" [(ngModel)]="codPostal" name="codPostal" class="form-control" id="codPostal" required>
+                <p style="color:red">{{errCodPostal}}</p>
             </div>
             <button type="submit" class="btn btn-primary">Agregar</button>
-
-        </div>
-        <div class="col-sm-6">
-            <h3>Formulario de Pago</h3>
+            <p>Los datos del envio son validos: {{validaEnvio}}</p>
+        </form>
+    </div>
+    <div class="col-sm-6">
+        <h3>Formulario de Pago</h3>
+        <form (ngSubmit)="agregarTarjeta()">
             <div class="mb-3">
                 <label for="tarjeta" class="form-label">Tipo de Tarjeta</label>
                 <input type="text" class="form-control" id="codPostal" required>
@@ -49,6 +56,9 @@
                 <input type="text" class="form-control" id="codPostal" placeholder=" el formato es: 00/00">
             </div>
             <button type="submit" class="btn btn-primary">Agregar</button>
-        </div>
+
+
+        </form>
     </div>
-</form>
+
+</div>
