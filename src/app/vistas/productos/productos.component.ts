@@ -25,7 +25,6 @@ export class ProductosComponent implements OnInit {
   index: number  | undefined | any;
   
   carrito: number= 0;
-  listaProductos: Producto[] = [];
 
   constructor(public productosService: ProductosService, public categoriaService: CategoriaService) {
     
@@ -36,13 +35,24 @@ export class ProductosComponent implements OnInit {
   }
 
 
-  agregar(producto: Producto): void {
-
-    this.listaProductos.push(producto);
+  agregar(producto: Producto | any): void {
     
-    this.productosService.lista_productos.push(producto);
+    this.index = producto.id; //le pasamos el id del producto al index
 
-    console.log(this.productosService.lista_productos);
+    console.log(this.index);
+
+    for (let prod in this.productosService.productos){ //recorremos los productos
+      if(this.index == this.productosService.productos[prod].id){ // comparamos si las id son iguales
+          producto.cantidad--; //si son iguales, descuenta 1 a la cantidad
+          this.productosService.lista_productos.push(producto); // y agrega un producto a la lista de productos nuevas
+          console.log("el id es correcto"+this.productosService.lista_productos[prod].id );
+      } else {
+        console.log("el id no coincide ");
+      }
+    }
+
+
+
     //console.log("el id es: ", id);
     //id = id - 1;//inicializamos la id en 0
 
