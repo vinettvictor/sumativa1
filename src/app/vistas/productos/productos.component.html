@@ -8,7 +8,6 @@
 </head>
 
 <body>
-    <h2 style="color: wheat"> Cantidad de productos en el carrito: {{carrito}}</h2>
     <br>
     <form>
         <input class="input-group mb-3" type="search" placeholder="Ingrese el Nombre del Producto, ejemplo: Red Bull Acai" aria-label="Search" #nombre>
@@ -18,7 +17,6 @@
         <app-modal [nombre]="Nombre" [informacion]="Informacion" [cantidad]="cantidad" [precio]="Precio">
         </app-modal>
     </form>
-
     <h1 class="text-center" style="color:wheat">Productos</h1>
     <div class="row">
         <div class="col-sm-4" *ngFor="let producto of productosService.productos">
@@ -37,7 +35,6 @@
                                 <button type="submit" class="card-button btn btn-success">Agregar
                                 </button>
                                 <br>
-
                             </form>
                             <form (ngSubmit)="obtenerInformacion(producto)">
                                 <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">

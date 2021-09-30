@@ -46,10 +46,7 @@ export class ProductosComponent implements OnInit {
       if(producto.id == this.productosService.productos[prod].id){ // comparamos si las id son iguales
           console.log("id coinciden: ")
           producto.cantidad--; //si son iguales, descuenta 1 a la cantidad
-          this.productosService.lista_productos.push(producto); // y agrega un producto a la lista de productos nuevas
-          
-      } else {
-        console.log("el id no coincide ");
+          this.productosService.lista_productos.push(producto); // y agrega un producto a la lista de productos nuevas        
       }
     }
   }
