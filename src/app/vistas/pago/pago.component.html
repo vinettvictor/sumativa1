@@ -36,27 +36,32 @@
         <h3>Formulario de Pago</h3>
         <form (ngSubmit)="agregarTarjeta()">
             <div class="mb-3">
-                <label for="tarjeta" class="form-label">Tipo de Tarjeta</label>
-                <input type="text" class="form-control" id="codPostal" required>
-            </div>
-            <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="codPostal" required>
+                <input type="text" [(ngModel)]="nombre" name="nombre" class="form-control" id="codPostal" required>
+                <p style="color:red">{{errNombre}}</p>
             </div>
             <div class="mb-3">
-                <label for="nombre" class="form-label">Número de la Tarjeta</label>
-                <input type="text" class="form-control" id="codPostal" required>
+                <label for="numeroTarjeta" class="form-label">Número de la Tarjeta</label>
+                <input type="text" [(ngModel)]="numeroTarjeta" name="numeroTarjeta" class="form-control" id="codPostal" required>
+                <p style="color:red">{{errNumeroTarjeta}}</p>
             </div>
             <div class="mb-3">
-                <label for="nombre" class="form-label">Código de Seguridad</label>
-                <input type="number" class="form-control" id="codPostal" required>
+                <label for="codigoSeguridad" class="form-label">Código de Seguridad</label>
+                <input type="number" [(ngModel)]="codigoSeguridad" name="codigoSeguridad" class="form-control" id="codPostal" required>
+                <p style="color:red">{{errCodigoSeguridad}}</p>
             </div>
             <div class="mb-3">
-                <label for="nombre" class="form-label">Mes y Año de expiración</label>
-                <input type="text" class="form-control" id="codPostal" placeholder=" el formato es: 00/00">
+                <label for="tipo" class="form-label">Tipo de Tarjeta</label>
+                <input type="text" [(ngModel)]="tipo" name="tipo" class="form-control" id="codPostal" required>
+                <p style="color:red">{{errTipo}}</p>
+            </div>
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Mes y Año de expiración</label>
+                <input type="text" [(ngModel)]="fecha" name="fecha" class="form-control" id="codPostal" placeholder=" el formato es: 00/00">
+                <p style="color:red">{{errFecha}}</p>
             </div>
             <button type="submit" class="btn btn-primary">Agregar</button>
-
+            <p>Los datos de la tarjeta son validos?: {{validaTarjeta}}</p>
 
         </form>
     </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductosService } from 'src/app/services/productos.service';
+import { TarjetaService } from 'src/app/services/tarjeta.service';
 
 @Component({
   selector: 'app-pago',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagoComponent implements OnInit {
   
+  //variables para Envio
   pais: string = "";
   calle: string = "";
   ciudad: string = "";
@@ -21,8 +24,25 @@ export class PagoComponent implements OnInit {
 
   validaEnvio: boolean = false;
 
+  //variables para Tarjeta
 
-  constructor() { }
+  tipo: string = "";
+  nombre: string = "";
+  numeroTarjeta: number | any;
+  codigoSeguridad: number | any ;
+  fecha: string | any;
+
+
+  errTipo: string = "";
+  errNombre: string = "";
+  errNumeroTarjeta: string = "";
+  errCodigoSeguridad: string = "";
+  errFecha: string = "";
+
+  validaTarjeta: boolean = false;
+  flag: boolean = false;
+
+  constructor(public productosService: ProductosService, public tarjetaService: TarjetaService) { }
 
   ngOnInit(): void {
   }
@@ -59,6 +79,48 @@ export class PagoComponent implements OnInit {
   }
 
   agregarTarjeta(){
-    
+
+    this.errTipo="";
+    this.errNombre="";
+    this.errNumeroTarjeta="";
+    this.errCodigoSeguridad="";
+    this.errFecha="";
+    this.validaTarjeta = false;
+
+    for (let index in this.tarjetaService.tarjetas){
+      if(this.nombre == this.tarjetaService.tarjetas[index].nombreCliente) {
+        console.log("El nombre coincide!");
+        this.flag = true;
+      } else {
+        this.flag = false;
+      }
+      if (this.numeroTarjeta == this.tarjetaService.tarjetas[index].numeroTarjeta){
+          console.log("El numero de tarjeta coincide!");
+          this.flag = true;
+      } else {
+        this.flag = false;
+      }
+      if (this.codigoSeguridad == this.tarjetaService.tarjetas[index].codigoSeguridad){
+        console.log("El código de seguridad coincide!");
+        this.flag = true;
+      } else {
+        this.flag = false;
+      }
+      if (this.tipo == this.tarjetaService.tarjetas[index].tipo){
+        console.log("El tipo de tarjeta  coincide!");
+        this.flag = true;
+      } else {
+        this.flag = false;
+      }
+      if (this.fecha == this.tarjetaService.tarjetas[index].fecha){
+        console.log("la fecha de expedicion coincide!");
+        this.flag = true;
+      } else {
+        this.flag = false;
+      }
+
+      this.validaTarjeta = this.flag;
+    }
+
   }
 }
